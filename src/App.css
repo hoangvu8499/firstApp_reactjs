@@ -1,8 +1,12 @@
 .App {
   text-align: center;
+  display: flex;
+  margin-top: 40px;
+  margin-left: 80px;
+
 }
 
-.App-logo {
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -35,4 +39,66 @@
   to {
     transform: rotate(360deg);
   }
+} */
+.leftPage {
+  width: 300px;
+  margin-left: 10px;
+}
+.textName {
+  margin-top: 50px;
+  margin-left: 200px;
+}
+.img {
+  width: 300px;
+  height: 300px;
+  padding-top: 20%;
+  padding-left: 40%;
+}
+/* --------------------------RIGHT PAGE---------------------------------------- */
+
+.rightPage {
+  width: 500px;
+  margin-left: 12%;
+  padding-top: 3%;
+}
+
+.line {
+  background-color: blue;
+  width: 84%;
+  height: 3px;
+}
+
+.bottomPage {
+  padding-top: 10%;
+  display: grid;
+  grid-template-columns: auto auto ;
+  padding: 10px;
+}
+
+.text {
+  padding: 0;
+  font-size: 1.8rem;
+  font-weight: 500;  
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+  margin: 10px;
+}
+
+.content_bottom {
+  background-color: rgba(134, 133, 133, 0.8);
+  padding-top: 10px;
+}
+
+.text_heading {
+  padding: 0;
+  font-size: 1.4rem;
+  font-weight: 500;  
+}
+
+.text_details {
+  margin-top: 14px;
+  font-size: 0.8rem;
+  line-height: 1.6rem;
 }
