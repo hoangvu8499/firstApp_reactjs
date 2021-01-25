@@ -1,6 +1,48 @@
 import logo from './logo.svg';
 import './App.css';
 
+const user = {
+  name: 'Hoang Vu',
+  age: 21,
+  listProduct: [
+    {
+      name: 'SmartPhone',
+      description: 'A smartphone is a mobile smart'
+    },
+    {
+      name: 'Laptop',
+      description: 'A laptopis a small computer (PC) '
+    },
+    {
+      name: 'smartwatches',
+      description: 'A smartwatch is a wearable computer in the form of a watch'
+    },
+    {
+      name: 'Headphone Bluetooth',
+      description: 'Bluetooth headphones may also include a microphone '
+    }
+  ]
+}
+
+function getName(user){
+  return <p>My name is {user.name}</p>
+}
+
+function getListProduct(user){
+  if(user.listProduct.length > 0){
+    return user.listProduct.map(item =>
+      <div className="text">
+        <div className="content_bottom">
+          <div className="text_heading">{item.name}</div>
+          <div class="text_details">
+            {item.description}
+          </div>
+        </div>
+      </div>
+    )
+  } 
+}
+
 function App() {
   return (
     <div className="App">
@@ -22,7 +64,7 @@ function App() {
         <img className="img" src="https://miro.medium.com/max/554/1*Ld1KM2WSfJ9YQ4oeRf7q4Q.jpeg" />
         <div className="textName">
           <h1>Hello</h1>
-          <p>My name is...</p>
+          {getName(user)}
         </div>
       </div>
 
@@ -34,46 +76,7 @@ function App() {
         </div>
 
         <div className="bottomPage">
-          <div className="text">
-            <div className="content_bottom">
-              <div className="text_heading">TextHere 01</div>
-              <div class="text_details">
-                This slide is 100% editable. Adapt it to your needs and capture
-                your audience's attention.
-              </div>
-            </div>
-          </div>
-
-          <div className="text">
-            <div className="content_bottom">
-              <div className="text_heading">TextHere 02</div>
-              <div class="text_details">
-                This slide is 100% editable. Adapt it to your needs and capture
-                your audience's attention.
-              </div>
-            </div>
-          </div>
-
-          <div className="text">
-            <div className="content_bottom">
-              <div className="text_heading">TextHere 03</div>
-              <div class="text_details">
-                This slide is 100% editable. Adapt it to your needs and capture
-                your audience's attention.
-              </div>
-            </div>
-          </div>
-
-          <div className="text">
-            <div className="content_bottom">
-              <div className="text_heading">TextHere 04</div>
-              <div class="text_details">
-                This slide is 100% editable. Adapt it to your needs and capture
-                your audience's attention.
-              </div>
-            </div>
-          </div>
-
+          {getListProduct(user)}
         </div>
       </div>
     </div>
